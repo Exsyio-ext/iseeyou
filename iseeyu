@@ -1,0 +1,35 @@
+#!/bin/bash
+echo "
+ **                                                      
+//                               **   **                 
+ **    ******  *****   *****    //** **   ******  **   **
+/**   **////  **///** **///**    //***   **////**/**  /**
+/**  //***** /*******/*******     /**   /**   /**/**  /**
+/**   /////**/**//// /**////      **    /**   /**/**  /**
+/**   ****** //******//******    **     //****** //******
+//   //////   //////  //////    //       //////   ////// 
+	"
+echo""
+echo " # facebook.com/virus.system007"
+echo " # @rikkimartin.rin"
+echo " # YT Exsyio Tech"
+echo ""
+
+
+echo -n 'ENTER YOUR WIFI IP : '
+read ip
+	while :
+	do
+		echo ""
+	      	echo "   LIST OF USER "
+	     	echo "  ################################"
+		echo ""
+		sleep 10
+		tsudo nmap -sP $ip/24 |
+ 	   	sed '$ d' |
+ 	  	sed '1d' |
+ 	 	sed 's/Nmap scan report for/IP Address :/g' |
+ 		sed '/^Host.*/d'
+		echo ""
+		echo 'Automaticly restart in 10 secon ctrl+c to stop '
+	done
